@@ -1,13 +1,69 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarmas con Cuenta Regresiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⏰ Alarmas con Cuenta Regresiva</h1>
+        
+        <div class="alarms-container">
+            <div class="alarm">
+                <h2>🔔 Alarma 1</h2>
+                <div class="countdown-display countdown-inactive" id="countdown1">00:00:00</div>
+                <div class="alarm-inputs">
+                    <input type="number" class="time-input" id="alarm1-hours" min="0" max="23" value="0">
+                    <span class="time-label">h</span>
+                    <input type="number" class="time-input" id="alarm1-minutes" min="0" max="59" value="0">
+                    <span class="time-label">m</span>
+                    <input type="number" class="time-input" id="alarm1-seconds" min="0" max="59" value="10">
+                    <span class="time-label">s</span>
+                </div>
+                <button class="btn" onclick="startAlarm(1)" id="start1">Iniciar</button>
+                <button class="btn btn-stop" onclick="stopAlarm(1)" id="stop1">Pausar</button>
+                <button class="btn btn-reset" onclick="resetAlarm(1)" id="reset1">Reiniciar</button>
+                <div class="status-message status-inactive" id="status1">Configurar tiempo y presionar Iniciar</div>
+            </div>
+
+            <div class="alarm">
+                <h2>🔔 Alarma 2</h2>
+                <div class="countdown-display countdown-inactive" id="countdown2">00:00:00</div>
+                <div class="alarm-inputs">
+                    <input type="number" class="time-input" id="alarm2-hours" min="0" max="23" value="0">
+                    <span class="time-label">h</span>
+                    <input type="number" class="time-input" id="alarm2-minutes" min="0" max="59" value="1">
+                    <span class="time-label">m</span>
+                    <input type="number" class="time-input" id="alarm2-seconds" min="0" max="59" value="0">
+                    <span class="time-label">s</span>
+                </div>
+                <button class="btn" onclick="startAlarm(2)" id="start2">Iniciar</button>
+                <button class="btn btn-stop" onclick="stopAlarm(2)" id="stop2">Pausar</button>
+                <button class="btn btn-reset" onclick="resetAlarm(2)" id="reset2">Reiniciar</button>
+                <div class="status-message status-inactive" id="status2">Configurar tiempo y presionar Iniciar</div>
+            </div>
+
+            <div class="alarm">
+                <h2>🔔 Alarma 3</h2>
+                <div class="countdown-display countdown-inactive" id="countdown3">00:00:00</div>
+                <div class="alarm-inputs">
+                    <input type="number" class="time-input" id="alarm3-hours" min="0" max="23" value="0">
+                    <span class="time-label">h</span>
+                    <input type="number" class="time-input" id="alarm3-minutes" min="0" max="59" value="5">
+                    <span class="time-label">m</span>
+                    <input type="number" class="time-input" id="alarm3-seconds" min="0" max="59" value="0">
+                    <span class="time-label">s</span>
+                </div>
+                <button class="btn" onclick="startAlarm(3)" id="start3">Iniciar</button>
+                <button class="btn btn-stop" onclick="stopAlarm(3)" id="stop3">Pausar</button>
+                <button class="btn btn-reset" onclick="resetAlarm(3)" id="reset3">Reiniciar</button>
+                <div class="status-message status-inactive" id="status3">Configurar tiempo y presionar Iniciar</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
